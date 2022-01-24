@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" mode="cover" src="{{userInfo.avatarUrl}}" ></image>
+    <text class="userinfo-nickname" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">昵称：{{userInfo.nickName}}</text>
+    <block  wx:if="{{!hasUserInfo}}">
+      <!-- <button class="info_button" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 点击登录 </button>
+      <button class="info_button" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击登录 </button> -->
+    </block>
+    <block  wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+      <!-- <text class="userinfo-nickname">昵称：{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+ 
+</view>
+<view>
+    <view class="fun">
+        <text class="fun_con">我的收藏-待开发</text>
+        <text class="fun_con">积分商城-待开发</text>
+        <text class="fun_con">关于我们-待开发</text>
+    </view>
+  </view>

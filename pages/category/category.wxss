@@ -1,0 +1,33 @@
+.tab {
+    height:auto;
+}
+.titles {
+    display: flex;
+    height: 50rpx;
+    line-height: 50rpx;
+    background-color: rgb(247, 247, 247);
+    font-size: 14px;
+    margin-bottom: 20rpx;
+}
+.titles .cur {
+    background-color: #fff;
+    border:2rpx solid rgb(241, 241, 241) ;
+    border-radius: 5rpx;
+}
+.btns {
+    flex:1;
+    text-align: center;
+
+}
+.cons .desc {
+    display: none;
+}
+.cons .cur {
+    display: block; 
+
+   
+}
+.cons image{
+    width: 30%;
+    margin-left: 2.5%;
+}

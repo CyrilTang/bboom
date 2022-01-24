@@ -1,0 +1,7 @@
+<!--pages/words/words.wxml-->
+<view class="content">
+    <view class="title">一言</view>
+    <view class="container">{{oneWord}}</view>
+    <view class="title">今日诗词</view>
+    <view class="container">{{jinrishici}}</view>
+</view>

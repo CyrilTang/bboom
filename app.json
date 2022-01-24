@@ -1,0 +1,45 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/category/category",
+        "pages/words/words",
+        "pages/user/users"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "BBoom",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh":true
+    },
+    "tabBar": {
+        "list": [
+            {
+                "iconPath": "pages/images/icon/home.png",
+                "selectedIconPath": "pages/images/icon/home-fill.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "selectedIconPath": "pages/images/icon/all-fill.png",
+                "iconPath": "pages/images/icon/all.png",
+                "pagePath": "pages/category/category",
+                "text": "分类"
+            },
+            {
+                "iconPath": "pages/images/icon/scenes.png",
+                "selectedIconPath": "pages/images/icon/scenes-fill.png",
+                "pagePath": "pages/words/words",
+                "text": "一言"
+            },
+            {
+                "iconPath": "pages/images/icon/account.png",
+                "selectedIconPath": "pages/images/icon/account-fill.png",
+                "pagePath": "pages/user/users",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

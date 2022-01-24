@@ -1,0 +1,22 @@
+/* pages/words/words.wxss */
+.title {
+    width: 95%;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: 5rpx 15rpx;
+    font-size: 14px;
+    color: #272727;
+    margin: 0 auto;
+    border: 2rpx solid #f7f7f7;
+    border-radius: 10rpx;
+    margin-top:20rpx ;
+
+}
+.container {
+    margin: 15rpx 15rpx;
+    padding: 15rpx;
+    background-color: #fbfbfff3;
+    border: 2rpx solid #fcfafa;
+    border-radius: 10rpx;
+    font-size: 14px;
+}

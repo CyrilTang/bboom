@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+    <!--轮播图-->
+  <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for-items="{{lunboData}}" wx:key="key">
+      <swiper-item>
+        <image mode="widthFix" src="{{item.imgurl}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <!-- 导航 -->
+  <view class="home-nav">
+    <block  wx:for-items="{{navData}}" wx:key="key" >
+    <view class="nav_block">
+      <image mode="cover" class="nav_images" src="{{item.navimgUrl}}" data-appid="{{item.appid}}" bindtap="navTo"></image>
+      <view class="nav_id">
+          {{item.id}}
+       </view> 
+    </view>
+    </block>
+  </view>
+  
+<view class="waller">
+  <text class="waller_title">推荐配图</text>
+  
+    <view class="wallpaper">
+      <block wx:for="{{userData}}"  wx:key="userData" >
+       <image bindtap="savePhoto" lazy-load="true" mode="heightFix" class="wallpaper_img" src="{{item.src}}" data-list="{{userData}}" data-src="{{item.src}}" ></image>
+      </block>
+    </view>
+  
+</view>
