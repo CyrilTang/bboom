@@ -3,14 +3,14 @@
         "pages/index/index",
         "pages/category/category",
         "pages/words/words",
-        "pages/user/users"
+        "pages/user/users",
+        "pages/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "BBoom",
-        "navigationBarTextStyle": "black",
-        "enablePullDownRefresh":true
+        "navigationBarTextStyle": "black"
     },
     "tabBar": {
         "list": [
@@ -40,6 +40,6 @@
             }
         ]
     },
-    "style": "v2",
+
     "sitemapLocation": "sitemap.json"
 }

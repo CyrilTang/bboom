@@ -3,30 +3,30 @@
         <view class="{{index==active?'btns cur':'btns'}}" wx:for="{{btns}}" wx:key="btns"  data-index="{{index}}" bindtap="change">{{item}}</view>
     </view>
     <view class="cons">
-        <view class="{{0==active?'desc cur':'desc'}}">
-            <block class="wall_img" wx:for="{{wall_jym_Data}}"  wx:key="wall_jym_Data" >
-                <image  bindtap="savePhoto" data-list="{{wall_jym_Data}}" lazy-load="true" data-src="{{item.src}}"  src="{{item.src}}" style="border-radius:15rpx" ></image>
-            </block>
+        <view class="container"> 
+        </view>
+        <view class="{{0==active?'desc cur':'desc'}}" >
+            <navigator class="wall_img" wx:for="{{animeDataPic}}" wx:key="*this" style="display: inline;" url="/pages/detail/detail?id='/anime/'{{item.id}}">
+            <!-- <block  wx:for="{{animeDataPic}}" wx:key="url" > -->
+                <image show-menu-by-longpress lazy-load  src="{{item.url}}"  style="border-radius:15rpx"></image>
+            <!-- </block> -->
+            </navigator>
         </view>
         <view class="{{1==active?'desc cur':'desc'}}">
-            <block wx:for="{{wall_dongman_Data}}"  wx:key="wall_dongman_Data" >
-                <image bindtap="savePhoto" data-list="{{wall_dongman_Data}}" lazy-load="true" data-src="{{item.src}}"   src="{{item.src}}"  style="border-radius:15rpx"></image>
-            </block>
+            <navigator  wx:for="{{girlDataPic}}" wx:key="*this" style="display: inline;" url="/pages/detail/detail?id='/girl/'{{item.id}}">
+                <image lazy-load show-menu-by-longpress src="{{item.url}}"  style="border-radius:15rpx"></image>
+            </navigator>
         </view>
         <view class="{{2==active?'desc cur':'desc'}}">
-            <block wx:for="{{wall_girl_Data}}"  wx:key="wall_girl_Data" >
-                <image bindtap="savePhoto" data-list="{{wall_girl_Data}}" lazy-load="true" data-src="{{item.src}}"   src="{{item.src}}"  style="border-radius:15rpx"></image>
-            </block>
+            <navigator  wx:for="{{sceneDataPic}}" wx:key="*this" style="display: inline;" url="/pages/detail/detail?id='/scene/'{{item.id}}">
+                <image show-menu-by-longpress lazy-load src="{{item.url}}"  style="border-radius:15rpx"></image>
+            </navigator>
         </view>
         <view class="{{3==active?'desc cur':'desc'}}">
-            <block wx:for="{{wall_view_Data}}"  wx:key="wall_view_Data" >
-                <image bindtap="savePhoto" data-list="{{wall_view_Data}}" lazy-load="true" data-src="{{item.src}}"   src="{{item.src}}"  style="border-radius:15rpx"></image>
-            </block>
+            <navigator  wx:for="{{otherDataPic}}" wx:key="*this" style="display: inline;" url="/pages/detail/detail?id='/scene/'{{item.id}}">
+                <image show-menu-by-longpress lazy-load src="{{item.url}}"  style="border-radius:15rpx"></image>
+            </navigator>
         </view>
-        <view class="{{4==active?'desc cur':'desc'}}">
-            <block wx:for="{{wall_text_Data}}"  wx:key="wall_text_Data" >
-                <image  bindtap="savePhoto" data-list="{{wall_text_Data}}" lazy-load="true" data-src="{{item.src}}"   src="{{item.src}}"  style="border-radius:15rpx"></image>
-            </block>
-        </view>
+ 
     </view>
 </view>

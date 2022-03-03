@@ -9,7 +9,7 @@
         ]
     },
     "setting": {
-        "urlCheck": false,
+        "urlCheck": true,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -35,8 +35,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
-        "useIsolateContext": true,
+        "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
@@ -44,10 +43,11 @@
         "disableUseStrict": false,
         "minifyWXML": true,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.19.4",
+    "libVersion": "2.22.0",
     "appid": "wx7150468760d92080",
     "projectname": "%E6%A2%A6%E6%BA%AA%E5%B0%8F%E7%A8%8B%E5%BA%8F",
     "debugOptions": {

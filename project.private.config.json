@@ -29,6 +29,19 @@
                     "pathName": "pages/category/category",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/words/words",
+                    "pathName": "pages/words/words",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/detail/detail",
+                    "query": "id=10",
+                    "scene": null,
+                    "launchMode": "default"
                 }
             ]
         }
