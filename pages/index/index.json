@@ -1,7 +1,17 @@
-{
+{"window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "title",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": "false",
+    "navigationStyle":"custom"
+},
   "usingComponents": {
- 
-  },
-  "enablePullDownRefresh":true,
-  "backgroundTextStyle":"dark"
+    "vtu-navbar": "/components/dist/navbar/vtu-navbar",
+    "vtu-swiper": "/components/dist/swiper/vtu-swiper",
+    "vtu-search": "/components/dist/search/vtu-search",
+    "vtu-layout-row": "/components/dist/layout/row/vtu-layout-row",
+    "vtu-layout-col": "/components/dist/layout/col/vtu-layout-col"
+  }
 }

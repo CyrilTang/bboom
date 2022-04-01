@@ -1,0 +1,13 @@
+<view class="nav_wall">
+    <vtu-navbar fixed="true" title="彼岸手机壁纸" bg-color="rgba(252,187,35,0)"></vtu-navbar>
+</view>
+<view class="down_background" style=" background-image:url({{backUrl}}); ">
+    <view class="current_timeDate">
+        <text class="current_time">{{current_time}}</text>
+        <text>{{current_date}}</text>
+    </view>
+    <view class="buttonClick">
+        <button class="download_wall" bindtap="downWallpaper">点击下载</button>
+        <button class="share_wall" open-type="share">分享</button>
+    </view>
+</view>

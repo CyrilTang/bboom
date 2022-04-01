@@ -1,41 +1,82 @@
-<!--index.wxml-->
+<vtu-navbar title="彼岸手机壁纸" bg-color="rgb(252,187,35)"></vtu-navbar>
 
-<view class="container">
-  <!--轮播图-->
+<!-- 轮播图 -->
+<vtu-swiper type="card" height="{{(windowWidth-40)/2}}px" list="{{imageList}}" swiper-class="swiperClass" indicator-dots="{{true}}" current="{{current}}" bind:change="bindChange"></vtu-swiper>
+<!-- 搜索 -->
+<vtu-search></vtu-search>
+<!-- 标签 -->
+<view class="cate_nav">
+    <view class="first_nav">
+        <view class="nav_info">
+        <navigator url='/pages/index/index'>
+            <text class="title">精美头像</text>
+            <text class="description"> 男生 女生 情头</text>
+        </navigator>
+        </view>
+        <view class="nav_info">
+            <text class="title">签名套图</text>
+            <text class="description"> 待开发</text>
+        </view>
 
-  <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-
-    <swiper-item wx:for-items="{{lunboData}}" wx:key="*this">
-
-      <image mode="widthFix" src="{{item.imgurl}}" class="slide-image"></image>
-
-    </swiper-item>
-
-  </swiper>
-</view>
-
-<!-- 导航 -->
-<view class="home-nav">
-  <block wx:for-items="{{navData}}" wx:key="key">
-    <view class="nav_block">
-      <image mode="cover" class="nav_images" src="{{item.navimgUrl}}" data-appid="{{item.appid}}" bindtap="navTo"></image>
-      <view class="nav_id">
-        {{item.id}}
-      </view>
     </view>
-  </block>
+    <view class="second_nav">
+        <view class="nav_info" style="margin-left:0%;">
+            <text class="title">发现</text>
+            <text class="description"> 待开发</text>
+        </view>
+        <view class="nav_info">
+            <text class="title">任务</text>
+            <text class="description"> 待开发</text>
+        </view>
+        <view class="nav_info">
+            <text class="title">4K</text>
+            <text class="description"> 待开发</text>
+        </view>
+    </view>
 </view>
-<view class="waller">
-  <view class="waller_title">
-    <text>推荐配图</text>
-    <text>下拉刷新</text>
-  </view>
-  <view class="wallpaper">
-    <navigator wx:for="{{recommendDataPic}}" wx:key="*this" style="display: inline;" url="/pages/detail/detail?id='/girl/'{{item.id}}">
+<!-- 热门推荐 -->
+<view class="hot_recommend">
+    <view class="hot_recommend_title">
+        <text class="hot_title">热门推荐</text>
+        <text class="hot_more">更多</text>
+    </view>
+    <!-- 图片宽高比需要 1：2 -->
+    <swiper class="hot_recommend_content" display-multiple-items="3" next-margin="30rpx"  >
+        <swiper-item class="hot_recommend_wallpaper" wx:for="{{hotList}}" wx:key="id">
+           <navigator url='/pages/details/index?id={{item.id}}'> <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image></navigator>
+        </swiper-item>
+    </swiper>
+</view>
 
-      <image mode="widthFix" show-menu-by-longpress mode="widthFix" class="wallpaper_img" lazy-load="true" data-src="{{item.url}}" src="{{item.url}}"></image>
+<!-- 头像 -->
 
-    </navigator>
-  </view>
+<view class="avatar">
+    <view class="avatar_info">
+        <text class="avatar_title">热门头像</text>
+        <text class="avatar_more">更多</text>
+    </view>
+    <!-- 图片宽高比需要 1：1 -->
+    <swiper class="avatar_content" display-multiple-items="3" next-margin="30rpx">
+        <swiper-item class="avatar_image">
+            <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F30%2F90%2F40%2F309040a0602c672cebc6ab3a1bbbc8cd.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650517168&t=f6bb29532b315cc8bf6b37380dbdefa4"></image>
+        </swiper-item>
+        <swiper-item class="avatar_image">
+            <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2F4d%2F63%2Fbd%2F4d63bd0b3bf8cc9aa0dc3e1111646b1c.jpeg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650517168&t=1a731034ab50819f652a56e78e5cc4a1"></image>
+        </swiper-item>
+        <swiper-item class="avatar_image">
+            <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Ffb%2F62%2Fc5%2Ffb62c55cb13f4f5f6702b02fbe59343b.jpeg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650517168&t=c3ecfc908015f1116d4e36b2da7d8f34"></image>
+        </swiper-item>
+        <swiper-item class="avatar_image">
+            <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2F91%2F16%2F65%2F911665d202e4155f21c261c80b33ad05.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650517168&t=095b1e062f90c5fcb7de89057a3a38d5"></image>
+        </swiper-item>
+    </swiper>
+</view>
+
+<view  >
+
+<block wx-for="{{hotList}}">
+
+</block>
+
 
 </view>

@@ -1,11 +1,12 @@
 /**app.wxss**/
+@import "/components/dist/assets/css/Vtu_Common.wxss";
+@import "/components/dist/assets/iconFonts/iconfont.wxss";
 .container {
-  /* height: 100%;
- 
+  height: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* padding: 200rpx 0; */
- 
+  padding: 200rpx 0;
+  box-sizing: border-box;
 } 
-/**app.wxss**/

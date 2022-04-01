@@ -1,0 +1,63 @@
+/* pages/details/index.wxss */
+
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.down_background {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* 时间 */
+.current_timeDate {
+    padding-top: 50%;
+}
+
+.current_timeDate {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 60rpx;
+    font-size: 40rpx;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.current_time{
+    font-size: 80rpx;
+    margin-bottom: 20rpx;
+
+}
+/* 时间结束 */
+
+/* 下载 */
+
+.download_wall, .share_wall {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height:50rpx;
+    bottom: 50rpx;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    border: 1rpx solid white ;
+    border-radius: 15rpx;
+}
+.download_wall {
+   
+    left: 100rpx;
+ 
+}
+.share_wall{
+   
+    right:100rpx;
+   
+}

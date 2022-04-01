@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "vtu-radio-group": "../../../radio/group/vtu-radio-group",
+    "vtu-radio": "../../../radio/radio/vtu-radio"
+  }
+}

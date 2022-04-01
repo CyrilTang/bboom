@@ -1,0 +1,92 @@
+<vtu-navbar title="精选壁纸" showNavBtn="true" back-label="返回" homeStyle="cachet" bg-color="rgb(252,187,35)" navbar-class="style4NavBar" homebar-class="style4HomeBar" frontColor="#fff"></vtu-navbar>
+
+<view class="all_tags">
+    <vtu-tag type="capsule">动漫</vtu-tag>
+    <vtu-tag type="default" bg-color="red">性感</vtu-tag>
+    <vtu-tag type="out" bg-color="orange">热血</vtu-tag>
+    <vtu-tag type="out" bg-color="#7e35bd">美女</vtu-tag>
+    <vtu-tag type="default" bg-color="#bd255c">电影</vtu-tag>
+    <vtu-tag type="out" bg-color="#1abf28">汽车</vtu-tag>
+    <vtu-tag type="out" bg-color="#1f8fee">风景</vtu-tag>
+    <vtu-tag type="default" bg-color="#ff7b8d">萝莉</vtu-tag>
+    <vtu-tag type="out" bg-color="#fc973d">J K</vtu-tag>
+    <vtu-tag type="default" bg-color="#fc973d">制服</vtu-tag>
+    <vtu-tag type="out" bg-color="#fc973d">游戏</vtu-tag>
+</view>
+
+
+<!-- 分类图片展示 -->
+<view class="all_category">
+    <view class="all_category_title">
+        <text style="font-weight: bold;">壁纸分类</text>
+        <text style="color: rgb(95, 95, 95);">滑动选择</text>
+    </view>
+    <swiper display-multiple-items="3" next-margin="50rpx" snap-to-edge="true" class="all_category_name" bindchange="swiperchange" circular="true">
+        <swiper-item class="all_category_content">
+            <text>热门</text>
+        </swiper-item>
+        <swiper-item class="all_category_content">
+            <text>动漫</text>
+        </swiper-item>
+        <swiper-item class="all_category_content">
+            <text> 风景</text>
+        </swiper-item>
+        <swiper-item class="all_category_content">
+            <text> 美女</text>
+        </swiper-item>
+        <swiper-item class="all_category_content">
+            <text>动态</text>
+        </swiper-item>
+        <swiper-item class="all_category_content">
+            <text>4K</text>
+        </swiper-item>
+    </swiper>
+    <!-- 分割线 -->
+    <view>
+        <vtu-divider></vtu-divider>
+    </view>
+    <!-- 分割线结束 -->
+    <!-- 分类图片 -->
+    <view class="all_category_wallpaper">
+        <!-- 热门 -->
+        <view class="{{0==item_index ?'show_image':'show_image show_current'}}">
+
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+
+        </view>
+        <!-- 动漫 -->
+        <view class="{{1==item_index ?'show_image':'show_image show_current'}}">
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}"  wx:key="id">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+        </view>
+        <!-- 风景 -->
+        <view class="{{2==item_index ?'show_image':'show_image show_current'}}">
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}"  wx:key="id">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+        </view>
+        <!-- 美女 -->
+        <view class="{{3==item_index ?'show_image':'show_image show_current'}}">
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}"  wx:key="id">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+        </view>
+        <!-- 动态 -->
+        <view class="{{4==item_index ?'show_image':'show_image show_current'}}">
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}"  wx:key="id">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+        </view>
+        <!-- 4k壁纸 -->
+        <view class="{{5==item_index ?'show_image':'show_image show_current'}}">
+            <navigator style="width: 30%;height: 100%;" url="/pages/details/index?id={{item.id}}" wx:for="{{wallList}}"  wx:key="id">
+                <image mode="widthFix" style="width: 100%;" src="{{item.url}}"></image>
+            </navigator>
+        </view>
+    </view>
+    <!-- 分类图片结束 -->
+</view>
+<!-- 分类图片展示结束 -->

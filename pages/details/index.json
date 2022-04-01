@@ -1,0 +1,13 @@
+{"window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "title",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": "false",
+    "navigationStyle":"custom"
+},
+  "usingComponents": {
+    "vtu-navbar": "/components/dist/navbar/vtu-navbar"
+  }
+}
